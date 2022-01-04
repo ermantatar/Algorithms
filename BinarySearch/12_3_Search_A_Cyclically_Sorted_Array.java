@@ -1,6 +1,14 @@
 
 // [378][478][550][631][103][203][220][234][279][368]
 
+/*
+for any m, if A[m] > A[n - 1], then the minimum value must be an index in the range [m + 1, n —1]. 
+Conversely, if A[m] < A[n - 1], then no index in the range [m + 1, n —1] can be the index of the minimum value. 
+(The minimum value may be at A[m].) Note that it is not possible for A[m] = A[n - 1], 
+since it is given that all elements are distinct. 
+These two observations are the basis for a binary search algorithm, described below.
+*/
+
 class Solution {
     public static int searchSmallest(List<Integer> A) {
         int left = 0;

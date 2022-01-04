@@ -12,4 +12,4 @@ class Solution {
     }
 }
 
-// time complexity: O(N) + KlogN, k amount of time to pop from the heap.
+// time complexity: O(N) + KlogN, k amount of time to pop from the heap

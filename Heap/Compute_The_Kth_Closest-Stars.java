@@ -14,7 +14,7 @@ public static class Star implements Comparable<Start> {
 
     @Override
     public int compareTo(Star secondStar) {
-        return Double.compare(this.distance() - secondStar.distance());
+        return Double.compare(this.distance(), secondStar.distance());
     }
 
     public static List<Star> findClosestKStars(int k, Iterator<Star> stars) {
