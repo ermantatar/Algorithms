@@ -12,3 +12,6 @@ public static BSTNode<Integer> findFirstGreaterThanK(BSTNode<Integer> tree, Inte
 
     return firstSoFar;
 }
+
+// time complexity O(H)
+// space complexity O(1)
