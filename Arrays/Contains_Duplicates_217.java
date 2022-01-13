@@ -35,3 +35,8 @@ public boolean containsDuplicate(int[] nums) {
     return false;
 }
 
+/* Note: 
+    Just use hash set and iterate over the array add one by one, 
+    check before adding it, if seen previously? then return true, otherwisse return false. 
+*/
+

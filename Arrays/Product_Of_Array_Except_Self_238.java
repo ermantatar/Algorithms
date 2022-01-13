@@ -42,12 +42,17 @@ class Optimized_Solution {
             answer[i] = answer[i-1] * nums[i-1];
         }
         
-        int R_sum = 1;
+        int R = 1;
         for(int i = length-1; i >= 0; i--) {
-            answer[i] = answer[i] * R_sum;
-            R_sum *= nums[i]
+            answer[i] = answer[i] * R;
+            R *= nums[i]
         }
 
         return answer;
     }
 }
+
+/* Note:
+    First of all, using the answer array, ans[0] = 1, for(int i = 1 then ...) leftProduct with answer[i] = nums[i-1] * ans[i-1]
+    Secondly, starting from R =0, then for(int i = nums.length-1...) then answer[i] = answer[i] * R and R = R * nums[i]; 
+*/

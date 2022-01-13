@@ -19,8 +19,8 @@ class DFS_Solution {
     
     private boolean dfs(int start, int end, Map<Integer, List<Integer>> neighbors)
     {
-        if(start == end)
-            return true;
+        if(start == end) return true;
+        
         explored.add(start);
         for(int node: neighbors.get(start)) {
             if(!explored.contains(node)) {
