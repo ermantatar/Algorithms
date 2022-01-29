@@ -20,8 +20,8 @@ class Solution {
         return s.substring(start, end + 1);
     }
     
-    private int expandAroundCenter(String s, int left, int right) {
-        int L = left, R = right;
+    private int expandAroundCenter(String s, int L, int R) {
+        
         while(0 <= L && R < s.length() && s.charAt(L) == s.charAt(R)) {
             L--;
             R++;
@@ -33,3 +33,14 @@ class Solution {
 
 //time complexity: O(n^2)
 //space complexity: O(1)
+
+
+
+/*
+       L           i
+[a][b][c][d][e][f][g][f][e][d][t][y][u]
+                               R
+L: 3
+R: 9
+
+*/

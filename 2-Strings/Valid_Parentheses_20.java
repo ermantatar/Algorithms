@@ -2,12 +2,12 @@
 // Time Complexity: O(N)
 // Space Complexity: O(N)
 
-class Stack_Solution {
+class Valid_Parentheses_20 {
     
     private Map<Character, Character> map;
     
     public Solution() {
-        map = new HashMap<Character, Character>();
+        map = new HashMap<>();
         this.map.put("}", "{");
         this.map.put(")", "(");
         this.map.put("]", "[");

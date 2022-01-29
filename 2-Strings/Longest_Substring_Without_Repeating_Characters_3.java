@@ -69,26 +69,39 @@ class SlidingWindow_Solution {
 // Optimized Sliding Window Approach
 // Time complexity : O(N) = O(N)
 // Space complexity : O(min(m, n)), Size of the string, or the charset.
+
+/*
+    Optimized Sliding Window approach. 
+    Create R, L, Len variables set to 0.
+    While R is traverse the string, check if current char is in map. 
+    If so, make sure if it's index position is greater or equal to L. 
+    If so, move the L, current char index + 1
+    In every loop, make sure, you add current char and its index to map
+    Check max len for the current round, Math.max(len, R - L + 1)
+    Increase the R with +1
+*/ 
+
 class SlidingWindowOptimized_Solution {
     public int lengthOfLongestSubstringWithoutRepeatingCharacters(String s) {
 
         Map<Character, Integer> map = new HashMap<>();
-        int left = 0, right = 0, len = 0;
+        int L = 0, R = 0, len = 0;
 
-        while(right < s.length()) {
-            char c = s.charAt(right);
+        while(R < s.length()) {
+
+            char c = s.charAt(R);
 
             if (map.containsKey(c)) {
-                if (map.get(c) >= left) {
-                    left = map.get(c) + 1;
+                if (map.get(c) >= L) {
+                    L = map.get(c) + 1;
                 }
             }
 
-            len = Math.max(len, right - left + 1);
-            map.put(c, right);
-            right++;
-
+            len = Math.max(len, R - L + 1);
+            map.put(c, R);
+            R++;
         }
+        
         return len; 
     }
 }

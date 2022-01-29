@@ -11,7 +11,8 @@
 // time complexity: O(N * KlogK) | N is the strs array size, K is the maximum length of string inside of strs array.  
 // space complexity: O(NK)
 
-class First_Solution {
+// 1st Solution
+class Group_Anagrams {
     public List<List<String>> groupAnagrams(String[] strs) {
         if (strs.length == 0) return new ArrayList();
         
@@ -33,9 +34,10 @@ class First_Solution {
     }
 }
 
-// time complexity: O(NK) | N is the strs array size, K is the maximum length of string inside of strs array.  
-// space complexity: O(NK)
-class Optimal_Solution {
+
+
+// Optimal Solution
+class Group_Anagrams {
     public List<List<String>> groupAnagrams(String[] strs) {
         if (strs.length == 0) return new ArrayList();
         
@@ -61,3 +63,6 @@ class Optimal_Solution {
         return new ArrayList(ans.values());
     }
 }
+
+// time complexity: O(NK) | N is the strs array size, K is the maximum length of string inside of strs array.  
+// space complexity: O(NK)
