@@ -1,6 +1,7 @@
 // time complexity: O(M x N) // where M and N are the number of rows and columns respectively.
 // space complexity: O(M + N)
-class Solution {
+class Set_Matrix_Zereos {
+    
     public void setZeroes(int[][] matrix) {
         
         int R = matrix.length;

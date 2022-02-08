@@ -1,4 +1,4 @@
-class Merge_Intervals_56 {
+class Merge_Intervals {
     public int[][] merge(int[][] intervals) {
         // First of all, sort the intervals by their start time.
         Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));

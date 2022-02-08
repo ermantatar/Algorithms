@@ -1,7 +1,7 @@
 // Input Array is sorted this time, and return 1-indexed result.
 // t: O(N)
 // s: O(1)
-class Solution {
+class Two_Sum_II {
     public int[] twoSumII(int[] nummbers, int target) {
         int left = 0;
         int right = nummbers.length - 1;

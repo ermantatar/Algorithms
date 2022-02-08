@@ -1,4 +1,4 @@
-class Solution {
+class Edit_Distance_Between_Two_Words {
     public int minDistance(String word1, String word2) {
         
         if ( word1.length() == 0 || word2.length() == 0) {

@@ -9,8 +9,8 @@
 // t: O(N)
 // s: O(1)
 
-class Solution {
-    public int maxProduct(int[] nums) {
+class Maximum_Product_of_Subarray {
+    public int maxProductSubarray(int[] nums) {
         if (nums.length == 0) return 0;
         
         int maxSoFar = nums[0];
@@ -26,7 +26,7 @@ class Solution {
             int prevMax = maxSoFar;
             
             // calculate new results
-            maxSoFar = Math.max(curr, Math.max(curr* prevMax, curr * prevMin));
+            maxSoFar = Math.max(curr, Math.max(curr * prevMax, curr * prevMin));
             minSoFar = Math.min(curr, Math.min(curr * prevMax, curr * prevMin));
             
             // calculate the result

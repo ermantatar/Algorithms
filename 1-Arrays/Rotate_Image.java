@@ -2,7 +2,8 @@
 // space complexity: O(1), because no additional space has been used. 
 
 // https://leetcode.com/problems/rotate-image/
-class Solution {
+class Rotate_Image {
+    
     public void rotate(int[][] matrix) {
         transpose(matrix);
         reflect(matrix);

@@ -14,6 +14,7 @@
 // 1st Solution
 class Group_Anagrams {
     public List<List<String>> groupAnagrams(String[] strs) {
+        
         if (strs.length == 0) return new ArrayList();
         
         Map<String, List<String>> ans = new HashMap<String, List<String>>();
@@ -32,13 +33,10 @@ class Group_Anagrams {
         }
         return new ArrayList(ans.values());
     }
-}
 
-
-
-// Optimal Solution
-class Group_Anagrams {
+    // Optimal Solution
     public List<List<String>> groupAnagrams(String[] strs) {
+        
         if (strs.length == 0) return new ArrayList();
         
         Map<String, List<String>> ans = new HashMap<String, List<String>>();

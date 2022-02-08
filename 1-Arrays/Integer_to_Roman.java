@@ -1,12 +1,12 @@
 // Time Complexity : O(1) Since there is a upper limit on the values array.
 // Space Complexity: O(1) 
-class Solution {
+class Integer_to_Roman {
     
     private static final int[] values = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
     private static final String[] symbols = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"}; // Edge cases are also included in the list.
-    3
     
     public String intToRoman(int num) {
+        
         StringBuilder sb = new StringBuilder();
         
         for (int i = 0; i < values.length && num > 0; i++) {

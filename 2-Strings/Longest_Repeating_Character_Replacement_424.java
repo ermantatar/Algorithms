@@ -34,6 +34,7 @@ class Optimized_Solution {
     public int longestRepeatingCharacterReplacement(String s, int k) {
         
         int R = 0, L = 0, len = 0, maxChar = 0;
+
         Map<Character, Integer> map = new HashMap();
         
         while(R < s.length()) {
@@ -44,7 +45,7 @@ class Optimized_Solution {
             
             maxChar = Math.max(maxChar, freqMap.get(c));
             
-            if(R-L+1 - maxChar > k) {
+            if((R-L+1) - maxChar > k) {
                 freqMap.put(s.charAt(L), freqMap.get(s.charAt(L)) - 1);
                 L++;
             }

@@ -1,6 +1,6 @@
 // t: O(N)
 // s: O(N)
-class Solution {
+class Two_Sum {
     public int[] twoSum(int[] nums, int target) {
         
         if (nums.length == 0) return new int[]{};

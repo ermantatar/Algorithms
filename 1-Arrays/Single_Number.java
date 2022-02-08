@@ -1,6 +1,6 @@
 // time complexity: O(N^2), Because we are searching inside of array loop while looping inside of for.
 // space complexity: O(N), Since we have declared the ArrayList. 
-class Solution {
+class Single_Number {
     public int singleNumber(int[] nums) {
         List<Integer> no_duplicate_list = new ArrayList<Integer>();
         
