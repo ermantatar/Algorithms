@@ -1,0 +1,59 @@
+''' Scope Notes: 
+    def main():
+        total = 0
+        def nested():
+            nonlocal total
+    
+    In Python 3, you can use the nonlocal statement to access non-local, non-global scopes.
+    The nonlocal statement causes a variable definition to bind to a previously created variable in the nearest scope (if there are same variable layer by layer, it will bind the closest one).
+'''
+
+
+'''
+Sorting Notes: 
+    If we want to sort by specific property of the object. 
+    => list.sort(key=lambda student: student[2])
+
+    sorted(list) or list.sort()
+'''
+
+''' 
+    Max Product of Subarray 
+    x = divmod(5, 2)
+    x will be a tuple of (2, 1)
+'''
+
+""" Sorting with Lambdas """
+intervals.sort(key=lambda interval: interval[0])
+
+
+""" You can add functionality into class on the fly """
+# This is helpful for Priority Queue Operations, when you need to send comparator for objects
+# In this example, PQ might have a error comparing to ListNode object if class doesn't have comparator.
+setattr(ListNode, "__lt__", lambda o1, o2: o1.val < o2.val)
+
+
+
+""" Default Dict """
+table = collections.defaultdict(set)
+table[(i, j)].append(5) # Sicne value is set, this will add key (i, j) -> [5, ] value 
+
+def group_anagrams(self, strs: List[str])-> List[List[str]]:
+        ans = collections.defaultdict(list)
+        for s in strs:
+            ans[tuple(sorted(s))].append(s)
+        return ans.values()
+""" End of Default Dict """
+
+
+
+""" COUNTER """
+class Solution:
+	def findDuplicates(self, nums: List[int]) -> List[int]:
+		# return [key for key, value in collections.Counter(nums).items() if value == 2]
+
+		res = []
+		for key, value in collections.Counter(nums).items():
+			if value == 2:
+				res.append
+
